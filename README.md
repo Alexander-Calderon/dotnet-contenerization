@@ -12,7 +12,8 @@
 
 Para crear la imagen Docker debemos definir un Dockerfile. Aquí un ejemplo:
 
-\`\`\`dockerfile
+```
+dockerfile
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env  
 
 WORKDIR /app
@@ -23,21 +24,21 @@ EXPOSE 5054
 
 ENTRYPOINT [\"dotnet\"]  
 CMD [\"dotnet\", \"watch\", \"run\", \"--project\", \"app.csproj\"]  
-\`\`\`
+```
 
 Construimos la imagen:  
 
-\`\`\`  
+```
 docker build -t dotnet-image -f Dockerfile.yml .
-\`\`\`
+```
 
 ## Ejecución del contenedor   
 
 Una vez tenemos la imagen, ejecutamos un contenedor:
 
-\`\`\`
+```
 docker run -dp 5054:5054 --name dotnet-container dotnet-image  
-\`\`\`
+```
 
 Esto expondrá el puerto 5054 del contenedor al 5054 del host y montará la aplicación.  
 
@@ -46,9 +47,9 @@ Esto expondrá el puerto 5054 del contenedor al 5054 del host y montará la apli
 
 Si realizamos cambios debemos reconstruir la imagen:
 
-\`\`\`
+```
 docker build --no-cache -t dotnet-image -f Dockerfile.yml .
-\`\`\`
+```
 
 Esto forzará una nueva build/construcción sin cache.
 
@@ -56,7 +57,8 @@ Esto forzará una nueva build/construcción sin cache.
 
 Podemos definir la configuración en un docker-compose.yml:  
 
-\`\`\`yaml
+```
+yaml
 version: \"3.8\"
 
 services:
@@ -70,21 +72,21 @@ services:
       - \"8000:5054\"
     volumes:
       - ./:/app
-\`\`\`
+```
 
 E iniciar con:   
 
-\`\`\` 
+```
 docker-compose up -d   
-\`\`\`
+```
 
 ## Reconstruir con Docker Compose
 
 Forzar reconstrucción:
 
-\`\`\`
+```
 docker-compose up -d --build
-\`\`\`
+```
 
 Esto aplicará los últimos cambios.
 
@@ -93,8 +95,8 @@ Esto aplicará los últimos cambios.
 
 Para desmontar el stack:
 
-\`\`\`  
+```  
 docker-compose down
-\`\`\`
+```
 
 ## Fin  
