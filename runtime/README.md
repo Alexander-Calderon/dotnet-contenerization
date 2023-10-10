@@ -9,6 +9,18 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 A copy of the license is included in the section entitled "GNU
 Free Documentation License".
 ```
+## Tabla de contenido
+
+- [Prerrequisitos](#prerrequisitos)
+- [Publicación](#publicación)
+  - [Especificando el RID en el archivo `.csproj`](#especificando-el-rid-en-el-archivo-csproj)
+  - [Especificando el RID mediante un flag](#especificando-el-rid-mediante-un-flag)
+    - [Explicación de las flags adicionales](#explicación-de-las-flags-adicionales)
+- [Despliegue](#despliegue)
+  - [Despliegue en Linux](#despliegue-en-linux)
+  - [Despliegue en Windows](#despliegue-en-windows)
+- [Videodemo](#videodemo)
+- [License](#license)
 
 ## Prerrequisitos
 
