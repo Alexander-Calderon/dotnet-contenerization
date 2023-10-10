@@ -99,4 +99,8 @@ Para desmontar el stack:
 docker-compose down
 ```
 
+## Videodemo
+
+[![asciicast](https://asciinema.org/a/1qHzY1U7IHr9HNTd6VUeP4oDT.svg)](https://asciinema.org/a/1qHzY1U7IHr9HNTd6VUeP4oDT)
+
 ## Fin  
