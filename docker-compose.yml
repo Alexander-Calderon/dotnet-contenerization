@@ -5,9 +5,9 @@ services:
     image: img-app-contenerizada
     build: 
       context: .
-      dockerfile: Dockerfile.yml  # Asegúrate de que este es el nombre correcto del archivo Dockerfile
+      dockerfile: Dockerfile.yml
     ports:
-      - "5054:5054"  # Esto mapea el puerto 5054 en tu máquina local al puerto 5054 en el contenedor
+      - "5054:5054"
     volumes:
       - ./dotnet_contenerized:/app
     container_name: c_docker_contenerized
