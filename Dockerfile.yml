@@ -1,0 +1,19 @@
+# Tirar del sdk 7.0 de microsoft para dotnet
+FROM mcr.microsoft.com/dotnet/sdk:7.0
+
+# Establecer el directorio de trabajo para la app
+WORKDIR /app
+
+# Copiar todo el código de la aplicación
+COPY . ./
+
+# Exponer el puerto para la app  
+EXPOSE 80
+EXPOSE 443
+
+
+ENTRYPOINT ["dotnet"]
+
+# Comando por defecto
+CMD ["watch", "run", "--project", ".\dotnet_contenerized\"]
+

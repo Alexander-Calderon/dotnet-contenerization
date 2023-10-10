@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+
+  app:
+    image: img-app-contenerizada
+    build: 
+      context: .
+      dockerfile: Dockerfile.yml
+    ports:
+      - 5000:80
+    volumes:
+      - ./:/app
+
+
