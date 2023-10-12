@@ -10,6 +10,6 @@ services:
       - "5054:5054"
     volumes:
       - ./dotnet_contenerized:/app
-    command: ["watch", "run", "--urls", "http://+:5054"]
+    #command: ["watch", "run", "--urls", "http://+:5054"] #si se usa este, se debe quitar el CMD[] del Dockerfile que hace lo mismo.
     container_name: alex-dotnet-container
 
