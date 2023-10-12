@@ -1,4 +1,4 @@
-namespace dotnet_contenerized;
+namespace test;
 
 public class WeatherForecast
 {

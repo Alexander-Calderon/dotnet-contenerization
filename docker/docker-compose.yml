@@ -10,4 +10,6 @@ services:
       - "5054:5054"
     volumes:
       - ./dotnet_contenerized:/app
+    command: ["watch", "run", "--urls", "http://+:5054"]
     container_name: alex-dotnet-container
+

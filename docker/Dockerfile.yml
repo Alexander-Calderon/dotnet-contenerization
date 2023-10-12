@@ -8,4 +8,5 @@ COPY ./dotnet_contenerized/ .
 #EXPOSE 5054
 
 ENTRYPOINT ["dotnet"]
-CMD ["dotnet", "watch", "run"]
+#CMD ["dotnet", "watch", "run"]
+CMD ["watch", "run", "--urls", "http://+:5054"]
