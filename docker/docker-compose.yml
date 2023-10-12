@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   app:
-    image: img-app-contenerizada
+    image: alex-dotnet-img
     build: 
       context: .
       dockerfile: Dockerfile.yml
@@ -10,4 +10,4 @@ services:
       - "5054:5054"
     volumes:
       - ./dotnet_contenerized:/app
-    container_name: c_docker_contenerized
+    container_name: alex-dotnet-container
